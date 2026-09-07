@@ -1,0 +1,20 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "posts"
+    label: "Artikelen"
+    folder: "posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Datum", name: "date", widget: "datetime" }
+      - { label: "Categorie", name: "category", widget: "select", options: ["Bedrijfsoverdracht", "Vastgoed", "Netwerken", "Ondernemen", "Nieuws"] }
+      - { label: "Samenvatting", name: "summary", widget: "text" }
+      - { label: "Omslagfoto", name: "thumbnail", widget: "image", required: false }
+      - { label: "Inhoud", name: "body", widget: "markdown" }
