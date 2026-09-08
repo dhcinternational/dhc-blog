@@ -154,7 +154,7 @@ function parseerMarkdown(tekst, bestandsnaam) {
     datum: data.date || data.datum || '',
     categorie: (data.categorie || data.category || '').toUpperCase(),
     samenvatting: data.samenvatting || data.summary || data.description || '',
-    foto: data.omslagfoto || data.coverImage || data.foto || '',
+    foto: data.thumbnail || data.omslagfoto || data.coverImage || data.foto || '',
     slug: bestandsnaam.replace('.md', '')
   };
 }
