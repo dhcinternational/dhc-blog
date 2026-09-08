@@ -7,50 +7,22 @@
   <meta name="description" content="Inzichten over bedrijfsoverdrachten, vastgoed, netwerken en exclusief ondernemen van De Handels Club.">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    :root {
-      --navy: #0d1b2a;
-      --gold: #c9a84c;
-      --light: #f5f5f0;
-      --gray: #888;
-    }
+    :root { --navy: #0d1b2a; --gold: #c9a84c; --gray: #888; }
     body { background: var(--navy); color: white; font-family: 'Georgia', serif; }
-    header {
-      border-bottom: 1px solid #ffffff15;
-      padding: 20px 40px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
+    header { border-bottom: 1px solid #ffffff15; padding: 20px 40px; display: flex; align-items: center; justify-content: space-between; }
     .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-    .logo-ring {
-      width: 44px; height: 44px; border-radius: 50%;
-      border: 2px solid var(--gold);
-      display: flex; align-items: center; justify-content: center;
-      font-weight: 700; color: var(--gold); font-size: 14px;
-    }
+    .logo-ring { width: 44px; height: 44px; border-radius: 50%; border: 2px solid var(--gold); display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--gold); font-size: 14px; }
     .logo-text { color: white; font-size: 16px; font-weight: 600; letter-spacing: 1px; }
     .logo-sub { color: var(--gold); font-size: 10px; letter-spacing: 3px; display: block; }
     nav a { color: var(--gray); text-decoration: none; margin-left: 24px; font-size: 14px; font-family: sans-serif; }
     nav a:hover { color: var(--gold); }
-    .hero {
-      text-align: center;
-      padding: 80px 40px 60px;
-      border-bottom: 1px solid #ffffff10;
-    }
+    .hero { text-align: center; padding: 80px 40px 60px; border-bottom: 1px solid #ffffff10; }
     .hero-label { color: var(--gold); font-size: 11px; letter-spacing: 4px; font-family: sans-serif; margin-bottom: 16px; }
     .hero h1 { font-size: 42px; font-weight: 400; margin-bottom: 16px; }
     .hero p { color: var(--gray); font-size: 16px; font-family: sans-serif; }
     .posts { padding: 60px 40px; max-width: 1100px; margin: 0 auto; }
     .posts-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 32px; }
-    .post-card {
-      background: #ffffff08;
-      border: 1px solid #ffffff12;
-      border-radius: 8px;
-      overflow: hidden;
-      text-decoration: none;
-      color: white;
-      transition: border-color 0.2s;
-    }
+    .post-card { background: #ffffff08; border: 1px solid #ffffff12; border-radius: 8px; overflow: hidden; text-decoration: none; color: white; transition: border-color 0.2s; cursor: pointer; }
     .post-card:hover { border-color: var(--gold); }
     .post-card img { width: 100%; height: 200px; object-fit: cover; }
     .post-card-body { padding: 24px; }
@@ -59,13 +31,18 @@
     .post-summary { color: var(--gray); font-size: 14px; font-family: sans-serif; line-height: 1.6; }
     .post-date { color: #555; font-size: 12px; font-family: sans-serif; margin-top: 16px; }
     .no-posts { color: var(--gray); font-family: sans-serif; text-align: center; padding: 60px; }
-    footer {
-      text-align: center;
-      padding: 32px 40px;
-      color: #444;
-      font-size: 13px;
-      font-family: sans-serif;
-    }
+    /* Artikel pagina */
+    .artikel { display: none; max-width: 760px; margin: 60px auto; padding: 0 40px 80px; }
+    .artikel.actief { display: block; }
+    .artikel-terug { color: var(--gold); font-family: sans-serif; font-size: 14px; text-decoration: none; display: inline-block; margin-bottom: 32px; }
+    .artikel-terug:hover { text-decoration: underline; }
+    .artikel-cat { color: var(--gold); font-size: 11px; letter-spacing: 3px; font-family: sans-serif; margin-bottom: 12px; }
+    .artikel h1 { font-size: 36px; font-weight: 400; line-height: 1.3; margin-bottom: 16px; }
+    .artikel-meta { color: #555; font-size: 13px; font-family: sans-serif; margin-bottom: 32px; }
+    .artikel img.cover { width: 100%; border-radius: 8px; margin-bottom: 40px; }
+    .artikel-inhoud p { color: #ccc; font-size: 17px; line-height: 1.8; margin-bottom: 20px; font-family: sans-serif; }
+    .artikel-inhoud h2 { font-size: 22px; font-weight: 400; margin: 40px 0 16px; color: white; }
+    footer { text-align: center; padding: 32px 40px; color: #444; font-size: 13px; font-family: sans-serif; }
     footer a { color: var(--gold); text-decoration: none; }
     @media (max-width: 600px) {
       header { padding: 16px 20px; }
@@ -73,6 +50,7 @@
       .hero h1 { font-size: 28px; }
       .posts { padding: 40px 20px; }
       .posts-grid { grid-template-columns: 1fr; }
+      .artikel { padding: 0 20px 60px; }
     }
   </style>
 </head>
@@ -91,23 +69,28 @@
   </nav>
 </header>
 
-<div class="hero">
-  <div class="hero-label">BLOG</div>
-  <h1>Inzichten & Nieuws</h1>
-  <p>Kennis over bedrijfsoverdrachten, vastgoed, netwerken en exclusief ondernemen.</p>
-</div>
-
-<div class="posts">
-  <div class="posts-grid" id="postsGrid">
-    <div class="no-posts">Artikelen worden geladen...</div>
+<div id="blogOverzicht">
+  <div class="hero">
+    <div class="hero-label">BLOG</div>
+    <h1>Inzichten & Nieuws</h1>
+    <p>Kennis over bedrijfsoverdrachten, vastgoed, netwerken en exclusief ondernemen.</p>
+  </div>
+  <div class="posts">
+    <div class="posts-grid" id="postsGrid">
+      <div class="no-posts">Artikelen worden geladen...</div>
+    </div>
   </div>
 </div>
+
+<div class="artikel" id="artikelPagina"></div>
 
 <footer>
   &copy; 2026 De Handels Club &nbsp;|&nbsp; <a href="https://dehandelsclub.nl">dehandelsclub.nl</a>
 </footer>
 
 <script>
+let alleArtikelen = [];
+
 async function laadArtikelen() {
   const grid = document.getElementById('postsGrid');
   try {
@@ -118,14 +101,14 @@ async function laadArtikelen() {
       grid.innerHTML = '<div class="no-posts">Eerste artikel komt binnenkort...</div>';
       return;
     }
-    const artikelen = await Promise.all(mdFiles.map(async f => {
+    alleArtikelen = await Promise.all(mdFiles.map(async f => {
       const res = await fetch(f.download_url);
       const tekst = await res.text();
       return parseerMarkdown(tekst, f.name);
     }));
-    artikelen.sort((a, b) => new Date(b.datum) - new Date(a.datum));
-    grid.innerHTML = artikelen.map(a => `
-      <a class="post-card" href="posts/${a.slug}.html">
+    alleArtikelen.sort((a, b) => new Date(b.datum) - new Date(a.datum));
+    grid.innerHTML = alleArtikelen.map((a, i) => `
+      <div class="post-card" onclick="toonArtikel(${i})">
         ${a.foto ? `<img src="${a.foto}" alt="${a.titel}">` : ''}
         <div class="post-card-body">
           <div class="post-cat">${a.categorie || 'NIEUWS'}</div>
@@ -133,21 +116,53 @@ async function laadArtikelen() {
           <div class="post-summary">${a.samenvatting || ''}</div>
           <div class="post-date">${formatDatum(a.datum)}</div>
         </div>
-      </a>
+      </div>
     `).join('');
   } catch(e) {
     grid.innerHTML = '<div class="no-posts">Artikelen konden niet worden geladen.</div>';
   }
 }
 
+function toonArtikel(index) {
+  const a = alleArtikelen[index];
+  const inhoud = a.inhoud
+    .split('\n')
+    .filter(r => r.trim())
+    .map(r => {
+      if (r.startsWith('## ')) return `<h2>${r.replace('## ', '')}</h2>`;
+      if (r.startsWith('# ')) return `<h2>${r.replace('# ', '')}</h2>`;
+      return `<p>${r}</p>`;
+    }).join('');
+
+  document.getElementById('artikelPagina').innerHTML = `
+    <a class="artikel-terug" onclick="toonOverzicht()">← Terug naar overzicht</a>
+    <div class="artikel-cat">${a.categorie || 'NIEUWS'}</div>
+    <h1>${a.titel}</h1>
+    <div class="artikel-meta">${formatDatum(a.datum)}</div>
+    ${a.foto ? `<img class="cover" src="${a.foto}" alt="${a.titel}">` : ''}
+    <div class="artikel-inhoud">${inhoud}</div>
+  `;
+  document.getElementById('blogOverzicht').style.display = 'none';
+  document.getElementById('artikelPagina').classList.add('actief');
+  window.scrollTo(0, 0);
+}
+
+function toonOverzicht() {
+  document.getElementById('blogOverzicht').style.display = 'block';
+  document.getElementById('artikelPagina').classList.remove('actief');
+  window.scrollTo(0, 0);
+}
+
 function parseerMarkdown(tekst, bestandsnaam) {
   const frontmatterMatch = tekst.match(/^---\n([\s\S]*?)\n---/);
   const data = {};
+  let inhoud = tekst;
   if (frontmatterMatch) {
     frontmatterMatch[1].split('\n').forEach(regel => {
       const [sleutel, ...waarde] = regel.split(':');
       if (sleutel) data[sleutel.trim()] = waarde.join(':').trim().replace(/^["']|["']$/g, '');
     });
+    inhoud = tekst.replace(/^---\n[\s\S]*?\n---\n/, '');
   }
   return {
     titel: data.title || data.titel || bestandsnaam,
@@ -155,6 +170,7 @@ function parseerMarkdown(tekst, bestandsnaam) {
     categorie: (data.categorie || data.category || '').toUpperCase(),
     samenvatting: data.samenvatting || data.summary || data.description || '',
     foto: data.thumbnail || data.omslagfoto || data.coverImage || data.foto || '',
+    inhoud: inhoud,
     slug: bestandsnaam.replace('.md', '')
   };
 }
