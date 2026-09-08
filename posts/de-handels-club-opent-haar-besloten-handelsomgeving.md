@@ -1,9 +1,9 @@
 ---
 title: " De Handels Club opent haar besloten handelsomgeving"
-date: 2026-09-07T09:08:00.000+02:00
+date: 2026-09-08T07:31:00.000+02:00
 category: Nieuws
 summary: Een besloten omgeving voor serieuze handel.
-thumbnail: www.dehandelsclub.nl
+thumbnail: /uploads/afbeelding.jpeg
 ---
 Een besloten omgeving voor serieuze handel.
 
