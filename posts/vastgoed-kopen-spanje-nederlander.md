@@ -3,6 +3,7 @@ title: "Vastgoed kopen in Spanje als Nederlander: waar je op let"
 date: 2026-10-07T09:00:00.000+02:00
 category: Vastgoed
 summary: Het NIE-nummer, de kosten bovenop de koopsom, en de controles die je vóór de notaris doet in plaats van erna.
+thumbnail: /uploads/vastgoed-kopen-spanje-nederlander.jpg
 ---
 Kopen in Spanje is niet moeilijk, maar het gaat anders dan in Nederland. De grootste verschillen zitten in wat je vóór de koop moet uitzoeken, en in wat er bovenop de vraagprijs komt.
 

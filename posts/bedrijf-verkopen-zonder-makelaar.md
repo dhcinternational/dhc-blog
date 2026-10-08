@@ -3,6 +3,7 @@ title: "Je bedrijf verkopen zonder overnamemakelaar: kan dat?"
 date: 2026-10-08T08:00:00.000+02:00
 category: Bedrijfsoverdracht
 summary: Wat een overnameadviseur kost, wat hij doet, en in welke gevallen je het beter zelf kunt regelen.
+thumbnail: /uploads/bedrijf-verkopen-zonder-makelaar.jpg
 ---
 Ja, dat kan. Het gebeurt vaker dan je denkt, en bij kleinere bedrijven is het eerder regel dan uitzondering. De vraag is niet of het mag, maar waar je iemand wel en niet voor nodig hebt — want dat scheelt vaak tienduizenden euro's, beide kanten op.
 

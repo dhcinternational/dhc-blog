@@ -3,6 +3,7 @@ title: "Wat is mijn bedrijf waard?"
 date: 2026-10-08T09:00:00.000+02:00
 category: Bedrijfsoverdracht
 summary: Waarom er geen enkel getal bestaat dat "de waarde" is, welke rekenmethodes gebruikt worden, en waar de prijs uiteindelijk op uitkomt.
+thumbnail: /uploads/wat-is-mijn-bedrijf-waard.jpg
 ---
 Het is de eerste vraag van bijna iedereen die overweegt te verkopen, en het eerlijke antwoord bevalt zelden: er is geen getal. Een bedrijf heeft geen waarde zoals een auto een dagwaarde heeft. Er is een bandbreedte, en waar je daarbinnen uitkomt hangt af van wie er tegenover je zit.
 
