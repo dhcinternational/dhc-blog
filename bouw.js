@@ -160,7 +160,7 @@ ${STIJL}
   </a>
   <nav>
     <a href="https://dehandelsclub.nl" rel="noopener">&larr; Hoofdsite</a>
-    <a href="https://dehandelsclub.nl/portaal" rel="noopener">Portaal</a>
+    <a href="https://portaal.dehandelsclub.nl" rel="noopener">Portaal</a>
   </nav>
 </header>
 
@@ -235,7 +235,7 @@ ${naarHtml(a.body)}
 
     <div class="cta">
       <p>Benieuwd wat er op dit moment wordt aangeboden?</p>
-      <p><a href="https://dehandelsclub.nl/portaal" rel="noopener">Bekijk het besloten portaal &rarr;</a></p>
+      <p><a href="https://portaal.dehandelsclub.nl" rel="noopener">Bekijk het besloten portaal &rarr;</a></p>
     </div>
   </div>${verder}
 </div>`;
