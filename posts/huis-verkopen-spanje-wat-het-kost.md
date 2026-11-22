@@ -24,13 +24,11 @@ Wie zijn bonnen heeft weggegooid, betaalt belasting over werk dat hij zelf heeft
 
 ## Wat er verder af gaat
 
-| Post | Wat je kwijt bent |
-|---|---|
-| Makelaarscourtage | 3 tot 5% plus 21% btw; boven de vijf ton valt er te onderhandelen |
-| Plusvalía municipal | €500 tot €4.000 voor een appartement na tien jaar; bij een villa na twintig jaar loopt het over de tien mille |
-| Energielabel | €100 tot €300, tien jaar geldig |
-| Hypotheek doorhalen | €500 tot €1.500 aan notaris en register, plus een eventuele boeterente |
-| Juridische begeleiding | €1.000 tot €3.000 voor het hele traject |
+- **Makelaarscourtage** — 3 tot 5% plus 21% btw; boven de vijf ton valt er te onderhandelen
+- **Plusvalía municipal** — €500 tot €4.000 voor een appartement na tien jaar; bij een villa na twintig jaar loopt het over de tien mille
+- **Energielabel** — €100 tot €300, tien jaar geldig
+- **Hypotheek doorhalen** — €500 tot €1.500 aan notaris en register, plus een eventuele boeterente
+- **Juridische begeleiding** — €1.000 tot €3.000 voor het hele traject
 
 De plusvalía is een gemeentelijke belasting op de waardestijging van de grond, en elke gemeente stelt binnen een wettelijk maximum zijn eigen tarief vast. Twee identieke appartementen, vijf kilometer uit elkaar, kunnen honderden euro's schelen.
 
